@@ -66,7 +66,8 @@ No modules.
 | <a name="input_name"></a> [name](#input\_name) | Name of secret to store. | `string` | n/a | yes |
 | <a name="input_policy"></a> [policy](#input\_policy) | Resource IAM policy which controls access to the secret. | `string` | `""` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Resource tags. | `map(string)` | `{}` | no |
-| <a name="input_value"></a> [value](#input\_value) | Secret value to store. | `string` | n/a | yes |
+| <a name="input_value"></a> [value](#input\_value) | Secret value to store. | `string` | `""` | no |
+| <a name="input_values"></a> [values](#input\_values) | Secrets maps to store. | `map(string)` | `{}` | no |
 
 ### Outputs
 
@@ -110,7 +111,7 @@ module "secret" {
   source = "../../"
 
   name        = var.name
-  value       = var.value
+  values      = var.values
   description = var.description
 
   kms_key_id = local.kms_key_id

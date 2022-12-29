@@ -3,8 +3,15 @@ variable "name" {
   description = "Name of secret to store."
 }
 
+variable "values" {
+  type        = map(string)
+  default     = {}
+  description = "Secrets maps to store."
+}
+
 variable "value" {
   type        = string
+  default     = ""
   description = "Secret value to store."
 }
 

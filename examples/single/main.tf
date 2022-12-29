@@ -30,7 +30,7 @@ module "secret" {
   source = "../../"
 
   name        = var.name
-  values      = var.values
+  value       = var.value
   description = var.description
 
   kms_key_id = local.kms_key_id

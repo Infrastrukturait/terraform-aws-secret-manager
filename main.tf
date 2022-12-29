@@ -1,5 +1,6 @@
 locals {
-  secret_id = aws_secretsmanager_secret.this.id
+  secret_id       = aws_secretsmanager_secret.this.id
+  values_to_store = var.value == "" ? (var.values == {} ? "mockup-data" : jsonencode(var.values)) : var.value
 }
 
 resource "aws_secretsmanager_secret" "this" {
@@ -12,5 +13,5 @@ resource "aws_secretsmanager_secret" "this" {
 
 resource "aws_secretsmanager_secret_version" "this" {
   secret_id     = local.secret_id
-  secret_string = var.value
+  secret_string = local.values_to_store
 }
