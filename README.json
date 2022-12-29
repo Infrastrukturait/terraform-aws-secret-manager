@@ -1,11 +1,22 @@
 {
-  "name": "",
-  "repo_url": "",
+  "authors": [
+    {
+      "email": "rafal@masiarek.pl",
+      "github": "rafalmasiarek",
+      "name": "Rafa\u0142 Masiarek",
+      "website": "https://masiarek.pl"
+    }
+  ],
+  "context": [
+    "## About",
+    "Terraform module for providing read and write to [AWS Secret Manager](https://aws.amazon.com/secrets-manager/).",
+    "AWS Secrets Manager helps you protect secrets needed to access your applications, services, and IT resources.",
+    "The service enables you to easily rotate, manage, and retrieve database credentials, API keys, and other secrets throughout their lifecycle."
+  ],
+  "includes": [
+    "docs/terraform.md"
+  ],
   "license": "GPLv3",
-  "logo": "",
-  "badges": [],
-  "includes": [],
-  "authors": [],
-  "context": [],
-  "references": []
+  "name": "terraform-aws-secret-manager",
+  "repo_url": "https://github.com/Infrastrukturait/terraform-aws-secret-manager"
 }
