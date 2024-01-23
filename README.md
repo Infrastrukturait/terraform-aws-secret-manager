@@ -126,7 +126,6 @@ module "secret" {
 
 <!-- END_TF_DOCS -->
 
-
 <!-- references -->
 
 [repo_link]: https://github.com/Infrastrukturait/terraform-aws-secret-manager
